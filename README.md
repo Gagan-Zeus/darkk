@@ -15,8 +15,7 @@
 
 - ⚙️ **Modular Architecture** – Clean separation between search, scrape, and LLM workflows.
 - 🤖 **Multi-Model Support** – Easily switch between OpenAI, Claude, Gemini or local models like Ollama.
-- 💻 **CLI-First Design** – Built for terminal warriors and automation ninjas.
-- 🐳 **Docker-Ready** – Optional Docker deployment for clean, isolated usage.
+- 🐳 **Docker-Ready** –  Docker deployment for clean, isolated usage.
 - 📝 **Custom Reporting** – Save investigation output to file for reporting or further analysis.
 - 🧩 **Extensible** – Easy to plug in new search engines, models, or output formats.
 
