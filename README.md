@@ -3,7 +3,7 @@
    <h1>Darkk: AI-Powered Dark Web OSINT Tool</h1>
 
    <p>Darkk is an AI-powered tool for conducting dark web OSINT investigations. It leverages LLMs to refine queries, filter search results from dark web search engines, and provide an investigation summary.</p>
-   <a href="#installation">Installation</a> &bull; <a href="#usage">Usage</a> &bull; <a href="#contributing">Contributing</a> &bull; <a href="#acknowledgements">Acknowledgements</a><br><br>
+   <a href="#installation">Installation</a> &bull; <a href="#contributing">Contributing</a> &bull; <a href="#acknowledgements">Acknowledgements</a><br><br>
 </div>
 
 ![Demo](.github/assets/screen-ui.png)
@@ -54,43 +54,6 @@ docker run --rm \
    darkk ui --ui-port 8501 --ui-host 0.0.0.0
 ```
 
-### Using Python (Development Version)
-
-- With `Python 3.10+` installed, run the following:
-
-```bash
-pip install -r requirements.txt
-python main.py cli -m gpt-4.1 -q "ransomware payments" -t 12
-```
-
----
-
-## Usage (CLI/Development Mode)
-
-```bash
-Darkk: AI-Powered Dark Web OSINT Tool
-
-options:
-  -h, --help            show this help message and exit
-  --model {gpt-4.1,claude-3-5-sonnet-latest,llama3.1,gemini-2.5-flash}, -m {gpt4o,gpt-4.1,claude-3-5-sonnet-latest,llama3.1,gemini-2.5-flash}
-                        Select LLM model (e.g., gpt4.1, claude sonnet 3.5, ollama models, gemini 2.5 flash)
-  --query QUERY, -q QUERY
-                        Dark web search query
-  --threads THREADS, -t THREADS
-                        Number of threads to use for scraping (Default: 5)
-  --output OUTPUT, -o OUTPUT
-                        Filename to save the final intelligence summary. If not provided, a filename based on the
-                        current date and time is used.
-
-Example commands:
- - python main.py cli -m gpt4.1 -q "ransomware payments" -t 12
- - python main.py cli --model gpt4.1 --query "sensitive credentials exposure" --threads 8 --output filename
- - python main.py cli -m llama3.1 -q "zero days"
- - python main.py cli -m gemini-2.5-flash -q "zero days"
-```
-
----
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request if you have major feature updates.
@@ -115,4 +78,5 @@ Open an Issue for any of these situations:
 - Tools inspiration from my [OSINT Tools for the Dark Web](https://github.com/apurvsinghgautam/dark-web-osint-tools) repository.
 - LLM Prompt inspiration from [OSINT-Assistant](https://github.com/AXRoux/OSINT-Assistant) repository.
 - Workflow Design by [Chintan Gurjar](https://www.linkedin.com/in/chintangurjar)
+
 
