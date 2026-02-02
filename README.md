@@ -27,7 +27,7 @@
 >
 > Use responsibly and at your own risk. Ensure you comply with all relevant laws and institutional policies before conducting OSINT investigations.
 >
-> Additionally, Robin leverages third-party APIs (including LLMs). Be cautious when sending potentially sensitive queries, and review the terms of service for any API or model provider you use.
+> Additionally, Darkk leverages third-party APIs (including LLMs). Be cautious when sending potentially sensitive queries, and review the terms of service for any API or model provider you use.
 
 ## Installation
 > [!NOTE]
@@ -40,9 +40,9 @@
 
 ### Docker (Web UI Mode) [Recommended]
 
-- Pull the latest Robin docker image
+- Build Docker Darkk image
 ```bash
-docker pull apurvsg/robin:latest
+docker build -t darkk .
 ```
 
 - Run the docker image as:
@@ -51,20 +51,7 @@ docker run --rm \
    -v "$(pwd)/.env:/app/.env" \
    --add-host=host.docker.internal:host-gateway \
    -p 8501:8501 \
-   apurvsg/robin:latest ui --ui-port 8501 --ui-host 0.0.0.0
-```
-
-### Release Binary (CLI Mode)
-
-- Download the appropriate binary for your system from the [latest release](https://github.com/apurvsinghgautam/robin/releases/latest)
-- Unzip the file, make it executable
-```bash
-chmod +x robin
-```
-
-- Run the binary as:
-```bash
-robin cli --model gpt-4.1 --query "ransomware payments"
+   darkk ui --ui-port 8501 --ui-host 0.0.0.0
 ```
 
 ### Using Python (Development Version)
@@ -81,7 +68,7 @@ python main.py cli -m gpt-4.1 -q "ransomware payments" -t 12
 ## Usage (CLI/Development Mode)
 
 ```bash
-Robin: AI-Powered Dark Web OSINT Tool
+Darkk: AI-Powered Dark Web OSINT Tool
 
 options:
   -h, --help            show this help message and exit
@@ -96,10 +83,10 @@ options:
                         current date and time is used.
 
 Example commands:
- - robin -m gpt4.1 -q "ransomware payments" -t 12
- - robin --model gpt4.1 --query "sensitive credentials exposure" --threads 8 --output filename
- - robin -m llama3.1 -q "zero days"
- - robin -m gemini-2.5-flash -q "zero days"
+ - python main.py cli -m gpt4.1 -q "ransomware payments" -t 12
+ - python main.py cli --model gpt4.1 --query "sensitive credentials exposure" --threads 8 --output filename
+ - python main.py cli -m llama3.1 -q "zero days"
+ - python main.py cli -m gemini-2.5-flash -q "zero days"
 ```
 
 ---
@@ -127,5 +114,5 @@ Open an Issue for any of these situations:
 - Idea inspiration from [Thomas Roccia](https://x.com/fr0gger_) and his demo of [Perplexity of the Dark Web](https://x.com/fr0gger_/status/1908051083068645558).
 - Tools inspiration from my [OSINT Tools for the Dark Web](https://github.com/apurvsinghgautam/dark-web-osint-tools) repository.
 - LLM Prompt inspiration from [OSINT-Assistant](https://github.com/AXRoux/OSINT-Assistant) repository.
-- Logo Design by my friend [Tanishq Rupaal](https://github.com/Tanq16/)
 - Workflow Design by [Chintan Gurjar](https://www.linkedin.com/in/chintangurjar)
+
